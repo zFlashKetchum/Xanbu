@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite o nome do aluno");
+        let nomeProfessor = prompt("Digite o nome do professor")
+        let nota1 = parseInt(prompt("Digite a primeira nota do aluno"));
+        let nota2 = parseInt(prompt("Digite a segunda nota do aluno"));
+        let nota3 = parseInt(prompt("Digite a terceira nota do aluno"));
+
+        let media = (nota1 + nota2 + nota3) / 3
+        
+        if(media < 4)
+             situacao = "Retido"
+        else if(media <= 6)
+           situacao = "Recuperação"
+        else
+            situcao = "Aprovado"
+
+        let apresenta = `
+        <h1>${nome} terminou com ${media} e ${situacao} com o professor ${nomeProfessor}</h1>`
+
+        
+        document.body.innerHTML = apresenta;
+    </script>
+</body>
+</html>
